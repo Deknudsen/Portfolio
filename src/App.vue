@@ -1,30 +1,36 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <webapp-header />
   <router-view/>
+  <webapp-footer />
+  <messageModal />
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+* {
+  margin:0;
+  padding:0;
 }
 </style>
+
+<script>
+import webappHeader from './components/webappHeader.vue'
+import webappFooter from './components/webappFooter.vue'
+import messageModal from './components/messageModal.vue'
+
+export default {
+  components: { webappHeader, webappFooter, messageModal },
+  name: 'App',
+
+  comments: {
+    'webapp-header':webappHeader,
+    'webApp-footer':webappFooter,
+    'messageModal':messageModal
+  },
+
+  data() {
+    return {
+      
+    }
+  },
+}
+</script>
