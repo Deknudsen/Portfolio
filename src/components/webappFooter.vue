@@ -2,8 +2,11 @@
     <footer>
         <div class="footerContent">
             <div class="logoBox">
-                <a href="#welcome" class="noselect">
+                <a href="../#welcome" class="noselect footerName">
                     <h2>Denni <span>Knudsen</span></h2>
+                </a>
+                <a href="../#welcome" class="footerLogo">
+                    <img src="@/assets/Logo.png" alt="Denni Knudsen Logo">
                 </a>
             </div>
             <div class="iconContain">
@@ -36,27 +39,58 @@ footer {
     width:78%;
     display: flex;
     justify-content: space-between;
-}
 
-.footerContent .logoBox {
-    width: 25%;
-    justify-content: left;
-}
+    .logoBox {
+        width: 25%;
+        justify-content: left;
 
-.footerContent .iconContain {
-    display: flex;
-    align-items: center;
-    width: 10%;
-    gap: 70px;
-    flex-direction: row;
-}
+        .footerLogo {
+            display: none;
+        }
+    }
 
-.footerContent .iconContain a {
-    width: 5%;
-    height: 50px;
-}
+    .iconContain {
+        display: flex;
+        align-items: center;
+        width: 10%;
+        gap: 70px;
+        flex-direction: row;
 
-.footerContent .iconContain a img {
-    width: 50px;
+        a {
+            width: 5%;
+            height: 50px;
+
+            img {
+                width: 50px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 992px) {
+    .footerContent {
+        .logoBox {
+            .footerName {
+                display: none;
+
+                h2 {
+                    display: none;
+                }
+            }
+            
+            .footerLogo {
+                display: block;
+                width: 100px;
+                height: 100px;
+                padding: 0;
+
+                img {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+        }
+    }
+
+    
 }
 </style>

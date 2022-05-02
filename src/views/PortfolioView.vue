@@ -24,24 +24,16 @@
 </template>
 
 <script>
-//import { ref } from 'vue'
 import getProjects from '../modules/getProjects'
 
     export default {
         setup() {
-
-            //let showData = ref(false)
-            //let isActive = ref(false)
-
             
-            
-        const { projects } = getProjects();
+            const { projects } = getProjects();
 
-        return {
-            projects,
-            //showData,
-            //isActive,
-        }
+            return {
+                projects,
+            }
 
         }
         
@@ -115,5 +107,10 @@ section {
     }
 }
 
-
+@media screen and (max-width: 992px) {
+    section .cardContainer .card {
+        width: 47%;
+        height: 510px;
+    }
+}
 </style>
